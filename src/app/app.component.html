@@ -1,6 +1,9 @@
-<section style='text-align: center;'>
-  <div>
-    <h4>App is functional</h4>
-  </div>
+<section>
+  <h2>Books</h2>
+  <app-book-list [books]="(books$ | async)!" (add)="onAdd($event)" />
+</section>
+<section>
+  <h2>My collection</h2>
+  <app-book-collection [books]="(bookCollection$ | async)!" (remove)="onRemove($event)" />
 </section>
 <router-outlet></router-outlet>
